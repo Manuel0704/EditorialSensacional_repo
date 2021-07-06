@@ -1,0 +1,176 @@
+.MiContenedorForm /*BLOQUE MICONTENEDOR FORM*/
+{
+    width: 600px;
+	margin: auto;
+    @media (max-width: 1023px)
+    {
+        width: 80%;
+    }
+    @media (max-width: 767px)
+    {
+        @include FontConfig(#2b3058, 12px, bold);
+    }
+    .MiContenedorForm__campo /*ELEMENTO CAMPO*/
+    {
+        width: 100%;
+        margin-bottom: 15px;
+        @media (max-width: 1023px)
+        {
+            width: 100%;
+        }
+        @media (max-width: 767px)
+        {
+            margin-bottom: 5px;
+        }    
+    }
+    .MiContenedorForm__campo--flexible /*MODIFICADOR DEL ELEMENTO CAMPO*/
+    {
+        @include FlexBoxConfig(flex, row, nowrap, center, center, center);
+    }
+    .MiContenedorForm__label /*ELEMENTO LABEL*/
+    {
+        @include FontConfig(#000, 20px, bold);
+        width: 90%;
+        @media (max-width: 1023px)
+        {
+            width: 100%;
+        }
+        @media (max-width: 767px)
+        {
+            font-size: 14px;
+        }    
+    }
+    .MiContenedorForm__CheckInput /*ELEMENTO CHECKINPUT*/
+    {
+        width: 10%;
+    }
+    .MiContenedorForm__item /*ELEMENTO ITEM (INPUT, TEXTAREA O BOTON)*/
+    {
+        @include FontConfig(#000, 24px, bold, center);
+        padding: 15px 0px;
+        background-color: #dfdfdf;
+        width: 100%;
+        border: none;
+        @media (max-width: 1023px)
+        {
+            padding: 10px 0px;
+            font-size: 20px;
+        }
+        @media (max-width: 767px)
+        {
+            padding: 5px 0px;
+            font-size: 14px;
+        }    
+    }
+    .MiContenedorForm__item--forma /*MODIFICADOR DEL ELEMENTO ITEM (FORMA)*/
+    {
+        height: 200px;
+        resize: none;
+        @media (max-width: 1023px)
+        {
+            padding: 10px 0px;
+        }
+        @media (max-width: 767px)
+        {
+            padding: 5px 0px;
+            height: 120px;
+        }
+    }
+    .MiContenedorForm__item--texto  /*MODIFICADOR DEL ELEMENTO ITEM (TEXTO)*/
+    {
+        color: #ffffff;
+    }
+    @each $n, $c in $colores-botones
+    {
+        .MiContenedorForm__item--#{$n} /*MODIFICADORES DEL ELEMENTO ITEM (COLOR DE FONDO)*/
+        {
+            background-color: $c;
+            transition: all .5s;
+            &:hover
+            {
+                background-color: black;
+            }
+        }
+    }
+}
+.Ubicacion /*BLOQUE UBICACION*/
+{
+    background-color: $c-sitio-3;
+    .Ubicacion__Mapa /*ELEMENTO MAPA*/
+    {
+        width: 45%;
+        margin: 0px auto;
+        padding-bottom: 20px;
+        @media (max-width: 1023px)
+        {
+            width: 80%;
+        }
+        @media (max-width: 767px)
+        {
+            width: 90%;
+        }
+    }
+    .Ubicacion__Iframe /*ELEMENTO IFRAME*/
+    {
+        width: 100%;
+        height: 450px;
+        border: none;    
+    }
+}
+.PreguntasFrecuentes/*BLOQUE PARA MODIFICAR UN COMPONENTE ESPECIFICO DE BOOTSTRAP*/
+{
+    .accordion
+    {
+        background-color: $c-sitio-2;
+    }
+    .card
+    {
+        background-color: transparent;
+        border: none;
+        .card-header
+        {
+            margin: 0px;
+            border: none;
+            @media (max-width: 1023px)
+            {
+            }
+            @media (max-width: 767px)
+            {
+                padding: 5px 10px;
+            }
+            h2
+            {
+                font-size: initial;
+            }
+            button
+            {
+                @include FontConfig(#FFFFFF, 1rem, bold);
+                border: none;
+                @media (max-width: 1023px)
+                {
+                    padding: 6px 0px;
+                }
+                @media (max-width: 767px)
+                {
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+    .card-body
+    {
+        @include FontConfig(#FFFFFF, 1rem, normal, justify);
+        line-height: 2;
+        background-color: $c-sitio-4;
+        padding: 20px 120px 20px 30px;
+        @media (max-width: 1023px)
+        {
+            padding: 15px 20px;
+        }
+        @media (max-width: 767px)
+        {
+            font-size: .7rem;
+            padding: 5px 10px;
+        }
+    }
+}

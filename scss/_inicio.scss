@@ -1,0 +1,383 @@
+/*TEXTOS DE PAGINA INICIO*/
+.TextosInicio
+{
+    @include FontConfig(#FFFFFF, 24px, normal, justify);
+    line-height: 2;
+    width: 100%;
+    @media (max-width: 1023px)
+    {
+        font-size: 20px;
+    }
+    @media (max-width: 767px)
+    {
+        font-size: 16px;
+    }
+}
+.TextosInicio--subseccion
+{
+    margin: 0px 30px;
+    @media (max-width: 767px)
+    {
+        padding-top: 10px;
+        margin: 0px;
+    }
+}
+.TitleSection
+{
+    @include FontConfig(#FFFFFF, 36px, bold);
+	padding: 30px 0px;
+	margin: 0px;
+    @media (max-width: 1023px)
+    {
+        font-size: 32px;
+        padding: 20px 0px;
+    }
+    @media (max-width: 767px)
+    {
+        font-size: 24px;
+        padding: 10px 0px;
+    }
+}
+/*QUE ES*/
+.SeccionQueEs
+{
+    padding: 0px 120px 0px 40px; 
+    background-color: $c-sitio-2;
+    @media (max-width: 1023px)
+    {
+        padding: 0px 30px;
+    }
+    @media (max-width: 767px)
+    {
+        padding: 0px 5px;
+    }
+    .SeccionQueEs__Descripcion
+    {
+        .row
+        {
+            align-items: center;
+            text-align: center;
+        }
+    }
+    .SeccionQueEs__titulo
+    {
+        @include FontConfig(#FFFFFF, 36px, bold, center);
+        padding: 30px 0px;
+        @media (max-width: 1023px)
+        {
+            font-size: 32px;
+            padding: 20px 0px;
+        }
+        @media (max-width: 767px)
+        {
+            font-size: 24px;
+            padding: 15px 0px;
+        }
+    }
+    .SeccionQueEs__Video
+    {
+        width: 600px;
+        margin: auto;
+        @media (max-width: 1023px)
+        {
+        }
+        @media (max-width: 767px)
+        {
+            width: 100%;
+        }
+    }
+}
+.Subsecciones
+{
+    @include FlexBoxConfig(flex, column, nowrap, center, center, center);
+    padding: 20px 60px 0px;
+    @media (max-width: 1023px)
+    {
+        padding: 20px 40px 0px;
+    }
+    @media (max-width: 767px)
+    {
+        padding: 10px 20px 0px;
+    }
+    .Subsecciones__subseccion
+    {
+        @include FlexBoxConfig(flex, column, nowrap, center, center, center);
+        background-color: $c-sitio-4;
+        margin-bottom: 40px;
+        padding: 0px 20px 40px;
+        border-radius: 20px;
+        @media (max-width: 767px)
+        {
+            padding: 0px 15px 15px;
+            margin-bottom: 20px;
+        }     
+    }
+    .Subsecciones__flex
+    {
+        @include FlexBoxConfig(flex, column, nowrap, center, center, center);
+        flex-flow: row nowrap;
+        @media (max-width: 1023px)
+        {
+        }
+        @media (max-width: 767px)
+        {
+            flex-direction: column;
+        }    
+    }
+    .Subsecciones__titulo
+    {
+        @include FontConfig(#FFFFFF, 28px, bold, justify);
+        margin: 0px;
+        padding: 30px 0px;
+        @media (max-width: 1023px)
+        {
+            padding: 20px 0px;
+            font-size: 24px;
+        }
+        @media (max-width: 767px)
+        {
+            padding: 15px 0px;
+            font-size: 20px;
+        }    
+    }
+    .Subsecciones__imagen
+    {
+        display: inline-block;
+        width: 200px;
+        @media (max-width: 767px)
+        {
+            width: 150px;
+        }    
+    }
+}
+/*ESTADISTICAS*/
+.SeccionEstadisticas
+{
+    background-color: $c-sitio-3;
+    padding: 0px 120px 30px 40px;
+    @media (max-width: 1023px)
+    {
+        padding: 0px 30px 10px;
+    }
+    @media (max-width: 767px)
+    {
+        padding: 0px 10px 10px;
+    }
+    .SeccionEstadisticas__cont-img
+    {
+        width: 100%;
+        padding: 20px 40px;
+        text-align: center;
+        @media (max-width: 767px)
+        {
+            padding: 5px 0px;
+        }    
+    }
+    .SeccionEstadisticas__imagen
+    {
+        width: 90%;
+        @media (max-width: 1023px)
+        {
+        }
+        @media (max-width: 767px)
+        {
+        }    
+    }
+}
+/*NOVEDADES*/
+.SeccionNovedades
+{
+    background-color: $c-sitio-2;
+    padding: 0px 120px 30px 40px;
+    @media (max-width: 1023px)
+    {
+        padding: 0px 30px 10px;
+    }
+    @media (max-width: 767px)
+    {
+        padding: 0px 10px 10px;
+    }
+}
+.MiSlider/*SLIDES*/
+{
+    height: 100vh;
+    .MiSlider__slide
+    {
+        position: relative;
+    }
+    .MiSlider__texto
+    {
+        @include FontConfig(#FFFFFF, 64px, bold);
+        position: absolute;
+        text-transform: initial;
+        font-style: italic;
+        top: 120px;
+        left: 40px;
+        @media (max-width: 1023px)
+        {
+            font-size: 48px;
+        }
+        @media (max-width: 767px)
+        {
+            font-size: 32px;
+        }
+    }
+}
+.MiContenedor /*BLOQUE CONTENEDOR DE NOVEDADES*/
+{
+    margin: 0px 120px 0px 40px;
+    @media (max-width: 1023px)
+    {
+        width: 95%;
+        margin: auto;
+    }
+    @media (max-width: 767px)
+    {
+        width: 95%;
+        margin: auto;
+    }
+}
+.MiCard /*BLOQUE MICARD Y SUS ELEMENTOS*/
+{
+    @include FlexBoxConfig(flex, row, nowrap, center, center, center);
+    background-color: #ccc;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    @media (max-width: 1023px)
+    {
+        // @include FlexBoxConfig(flex, column-reverse, nowrap, center, center, center);
+        margin-bottom: 40px;
+    }
+    @media (max-width: 767px)
+    {
+        @include FlexBoxConfig(flex, column-reverse, nowrap, center, center, center);
+        margin-bottom: 40px;
+    }
+    .MiCard__thumbnail
+    {
+        width: 650px;
+        height: 200px;
+        margin-right: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        display: inline-block;
+        @media (max-width: 1023px)
+        {
+            width: 100%;
+        }
+        @media (max-width: 767px)
+        {
+            width: 100%;
+            height: 100%;
+            margin: 10px 0px 0px 0px;
+        }    
+    }
+    .MiCard_img
+    {
+        width: 100%;
+    }
+    .MiCard__titulo
+    {
+        @include FontConfig(#000, 32px, bold);
+        margin-bottom: 20px;
+        @media (max-width: 1023px)
+        {
+            @include FontConfig(#000, 24px, bold);
+            margin-bottom: 10px;
+        }
+        @media (max-width: 767px)
+        {
+            @include FontConfig(#000, 20px, bold);
+            margin-bottom: 10px;
+        }    
+    }
+    .MiCard__parrafo
+    {
+        @include FontConfig(#000, 18px, normal, justify);
+        line-height: 28px;
+        margin-bottom: 20px;
+        @media (max-width: 1023px)
+        {
+            @include FontConfig(#000, 16px, normal);
+            margin-bottom: .5em;
+        }
+        @media (max-width: 767px)
+        {
+            @include FontConfig(#000, 14px, normal);
+            margin-bottom: .5em;
+            line-height: 24px;
+        }    
+    }
+}
+.MiCard--reciente /*MODIFICADOR DEL BLOQUE MICARD*/
+{
+    background-color: #1B2A41;
+    .MiCard__titulo
+    {
+        color: white;
+    }
+    .MiCard__parrafo
+    {
+        @extend .MiCard__titulo;
+    }
+}
+.MiBoton /*BLOQUE MIBOTON Y SUS ELEMENTOS*/
+{
+    @include FlexBoxConfig(inline-flex, row, nowrap, space-evenly, center, center);
+    @include FontConfig(#FFFFFF, 16px, bold);
+    position: absolute;
+    background-color: #403cc2;
+    text-decoration: none;
+    border: none;
+    min-width: 180px;
+    height: 50px;
+    padding: 0px 30px;
+    border-radius: 50px;
+    transition: .3s ease all;
+    bottom: -1em;
+    right: 2rem;
+    @media (max-width: 1023px)
+    {
+        min-width: 10px;
+        width: 20%;
+        right: 40%;
+    }
+    @media (max-width: 767px)
+    {
+        min-width: 10px;
+        width: 50%;
+        right: 25%;
+    }
+    &:hover
+    {
+        color: white;
+        background-color: #24216e;
+        text-decoration: none;
+    }
+}
+.MiBoton--ProductoLibro
+{
+    position: relative;
+    background-color: $c-blanco;
+    color: $c-negro;
+    margin: 1em 0px;
+    bottom: 0px;
+    right: 0px;
+    @media (max-width: 1023px)
+    {
+        min-width: 180px;
+        width: 20%;
+    }
+    @media (max-width: 767px)
+    {
+        min-width: 180px;
+        width: 40%;
+    }
+    &:hover
+    {
+        color: $c-negro;
+        background-color: #cfcfcf;
+    }
+}

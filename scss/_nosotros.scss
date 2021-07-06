@@ -1,0 +1,169 @@
+.Historia
+{
+    @include FlexBoxConfig(flex, row, nowrap, space-evenly, center, center);
+    background-color: $c-sitio-2;
+    padding: 0px 120px 0px 20px;
+	margin-bottom: 20px;
+    @media (max-width: 1023px)
+    {
+        @include FlexBoxConfig(flex, column, nowrap, center, center, center);
+        padding: 0px 20px;
+    }
+    @media (max-width: 767px)
+    {
+        padding: 10px;
+    }
+    .Historia__textos
+    {
+        @include FlexBoxConfig(flex, column, nowrap, center, center, center);
+        width: 70%;
+        @include FontConfig(#FFFFFF, 40px, bold);
+        padding: 20px 60px;
+        @media (max-width: 1023px)
+        {
+            width: 100%;
+            padding: 10px 0px;
+        }
+        @media (max-width: 767px)
+        {
+            font-size: 24px;
+        }
+    }
+    .Historia__titulo
+    {
+        @include FontConfig(#FFFFFF, 40px, bold);
+        padding: 20px 60px;
+        @media (max-width: 1023px)
+        {
+            font-size: 24px;
+        }
+        @media (max-width: 767px)
+        {
+            font-size: 24px;
+        }
+    }
+    .Historia__parrafo
+    {
+        @include FontConfig(#FFFFFF, 24px, normal, justify);
+        line-height: 2;
+        padding: 0px 20px 30px;
+        @media (max-width: 1023px)
+        {
+            padding: 0px 10px;
+            font-size: 20px;
+        }
+        @media (max-width: 767px)
+        {
+            font-size: 12px;
+        }
+    }
+    .Historia__fundador
+    {
+        padding: 15px 0px 30px;
+        width: 250px;
+    }
+    .Historia__imagen
+    {
+        border: 8px solid #FFFFFF;
+        width: 100%;
+    }
+}
+.Nosotros
+{
+    @include FlexBoxConfig(flex, column, nowrap, center, center, center);
+    margin: 0px 120px 20px 20px;
+    @media (max-width: 1023px)
+    {
+        margin: 0px 10px;
+    }
+    @media (max-width: 767px)
+    {
+        margin: 0px 10px;
+    }
+    .Nosotros__persona
+    {
+        @include FlexBoxConfig(flex, row, nowrap, center, center, stretch);
+        margin-bottom: 20px;
+        @media (max-width: 1023px)
+        {
+            font-size: 22px;
+        }
+        @media (max-width: 767px)
+        {
+            @include FlexBoxConfig(flex, column, nowrap, center, center, stretch);
+        }    
+    }
+    .Nosotros__perfil
+    {
+        @include FlexBoxConfig(flex, column, nowrap, center, center, center);
+        background-color: #ccc;
+    }
+    .Nosotros__nombre
+    {
+        @include FontConfig(#000, 30px, bold, center);
+        padding: 10px 15px;
+        @media (max-width: 1023px)
+        {
+            font-size: 22px;
+        }
+        @media (max-width: 767px)
+        {
+            font-size: 18px;
+            margin: 0px 10px;
+        }    
+    }
+    .Nosotros__foto
+    {
+        width: 200px;
+        margin: 15px 30px;
+        animation-name: animFoto;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+        animation-duration: 1.5s;
+        animation-delay: 0s;
+        @keyframes animFoto
+        {
+            0%
+            {transform: scale(1);   }
+            50%
+            {transform: scale(1.1); }
+            100%
+            {transform: scale(1);   }
+        }
+        @media (max-width: 1023px)
+        {
+        }
+        @media (max-width: 767px)
+        {
+        }    
+    }
+    .Nosotros__bio
+    {
+        display: flex;
+        background-color: #DDDDDD;
+        @media (max-width: 1023px)
+        {
+           
+        }
+        @media (max-width: 767px)
+        {
+            padding: 5px;
+        }    
+    }
+    .Nosotros__texto
+    {
+        @include FontConfig($c-negro, 24px, normal, justify);
+        line-height: 2;
+        align-self: center;
+        margin: 0px 30px;
+        @media (max-width: 1023px)
+        {
+            font-size: 16px;
+        }
+        @media (max-width: 767px)
+        {
+            font-size: 12px;
+            margin: 0px 10px;
+        }    
+    }
+}

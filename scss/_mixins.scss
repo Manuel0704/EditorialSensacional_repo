@@ -1,0 +1,19 @@
+@mixin FlexBoxConfig($Tflex, $Fdirection, $Fwrap, $Jcontent, $Jitems, $Aitems)
+{
+    display: $Tflex;
+    flex-direction: $Fdirection;
+    flex-wrap: $Fwrap;
+    justify-content: $Jcontent;
+    justify-items: $Jitems;
+    align-items: $Aitems;
+}
+@mixin FontConfig($color, $size, $weight, $align:null)
+{
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    @if $align == null {}
+    @else if $align != null
+    {text-align: $align;}
+
+}

@@ -1,0 +1,156 @@
+.Video
+{
+    width: 560px;
+	margin: auto;
+    margin-bottom: 20px;
+    @media (max-width: 1023px)
+    {
+        @include FlexBoxConfig(flex, row, wrap, center, center, center);
+    }
+    @media (max-width: 767px)
+    {
+        width: 95%;
+        // height: 250px;
+    }
+}
+.ProductosArea
+{
+    background-color: #DCDCDC;
+    padding: 0px;
+}
+
+.Categorias
+{
+    .Categorias__titulo
+    {
+        @include FontConfig(#000000, 18px, bold, center);
+        text-transform: uppercase;
+        padding: 20px 0px;
+    }
+    .Categorias__lista
+    {
+        @include FlexBoxConfig(flex, row, wrap, center, center, center);
+        padding: 0px;
+        list-style: none;
+        @media (max-width: 1023px)
+        {
+            @include FlexBoxConfig(flex, row, wrap, center, center, center);
+        }
+        @media (max-width: 767px)
+        {
+            @include FlexBoxConfig(flex, row, wrap, center, center, center);
+        }    
+    }
+    .Categorias__ItemLista
+    {
+        margin: 20px auto;
+        @media (max-width: 1023px)
+        {
+
+        }
+        @media (max-width: 767px)
+        {
+            margin: 10px auto;
+        }
+    }
+    .Categorias__enlace
+    {
+        @include FontConfig(null, 14px, normal, center);
+        display: inline-block;
+        background-color: $c-sitio-4;
+        width: 200px;
+        min-width: 120px;
+        padding: 15px 0px;
+        transition: all .5s;
+        @media (max-width: 767px)
+        {
+           font-size: 12px;
+           width: 120px;
+           padding: 10px 0px;
+        }    
+        &:hover
+        {
+            background-color: #1f386d;
+        }
+        text-decoration: none;
+    }
+}
+
+.Libros
+{
+    padding: 0.5em 0.5em;
+    .Libros__contenedor
+    {
+        padding: 0.5em;
+        .Libros__producto
+        {
+            @include FlexBoxConfig(flex, column, nowrap,space-evenly, center, center);
+            background-color: $c-sitio-2;
+            .Libros__titulo
+            {
+                @include FontConfig($c-blanco, 1.25em, bold);
+                margin: 0.625rem 0px;
+            }
+            .Libros__imagen
+            {
+                width: 75%;
+                transition: transform 1s;
+                &:hover
+                {
+                    transform: scale(1.4) translateY(-50px);
+                }
+            }
+        }
+    }
+}
+.MiTabla
+{
+	border-collapse: collapse;
+	margin: 20px 120px 30px 40px;
+    .MiTabla__cabecera
+    {
+        .MiTabla__data
+        {
+            @include FontConfig($c-blanco, 20px, bold, center);
+            padding: 1em .2em;
+            background-color: $c-sitio-2;
+            @media (max-width: 1023px)
+            {
+        
+            }
+            @media (max-width: 767px)
+            {
+                font-size: 10px;
+            }        
+        }
+    }
+    .MiTabla__cuerpo
+    {
+        .MiTabla__data
+        {
+            padding: 0px .2em;
+        }
+    }
+    .MiTabla__Cimpar
+    {
+        background-color: #bebebe;
+    }
+    .MiTabla__Cpar
+    {
+        background-color: #e7e7e7;
+    }
+    .MiTabla__lista
+    {
+        list-style: none;
+    }
+    @media (max-width: 1023px)
+    {
+        margin: 10px auto;
+        width: 95%;
+    }
+    @media (max-width: 767px)
+    {
+        @include FontConfig(black, 8px, 500);
+        margin: 10px 0px;
+    }
+}

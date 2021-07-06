@@ -1,0 +1,219 @@
+/*TODO EL SITIO*/
+*
+{
+	font-family: 'KoHo', sans-serif;
+	box-sizing: border-box;
+}
+/*ESCALA DE AZULES=============================================*/
+.color-p1-main
+{
+    background-color: $color-principal-1;
+}
+@for $i from 1 through 5 /*VARIACION DE AZULES */
+{
+    .color-p1-claro-#{$i}
+    {
+        background-color: mix(white, $color-principal-1, $i*20%);
+    }
+    .color-p1-oscuro-#{$i}
+    {
+        background-color: mix(black, $color-principal-1, $i*20%);
+    }
+}
+/*BORDES=======================================================*/
+@each $b, $d in $bordes
+{
+    .pBorder#{$b}
+    {
+        border-#{$d}-radius: 30px;
+    }
+}
+/*CABECERA DEL SITIO WEB=======================================*/
+.MiCabecera /*BLOQUE CABECERA*/
+{
+    background-color: $c-sitio-1;
+    .MiCabecera__icono
+    {
+        width: 300px;
+        @media (max-width: 1023px)
+        {
+            width: 250px;
+        }
+        @media (max-width: 767px)
+        {
+            width: 200px;    
+        }
+    }
+}
+.MenuNavegacion /*BLOQUE MENUDENAVEGACION*/
+{
+    .MenuNavegacion__item
+    {
+        text-align: center;
+        padding: 0px 25px;
+        width: 175px;
+    }
+    .MenuNavegacion__enlace /*ELEMENTO ENLACE DEL BLOQUE*/
+    {
+        @include FontConfig(#FFFFFF, 24px, bold);
+        transition: all .5s;
+        @media (max-width: 1023px)
+        {
+            @include FontConfig(#FFFFFF, 20px, bold, center);    
+        }
+        @media (max-width: 767px)
+        {
+            @include FontConfig(#FFFFFF, 18px, bold, center);    
+        }
+        &:hover
+        {
+            @include FontConfig(#FFFFFF, 30px, bold);
+            transform: translate(-9px, -5px);
+        }    
+    }
+    .MenuNavegacion__enlace--resaltado /*MODFICADOR DEL ELEMENTO ENLACE*/
+    {
+        @include FontConfig(#FFFFFF, 30px, bold);
+    }
+}
+/*ASIDE DEL SITIO WEB==========================================*/
+.MiAside /*BLOQUE MIASIDE*/
+{
+    .SocialBar /*BLOQUE SOCIAL BAR*/
+    {
+        @include FlexBoxConfig(flex, column, nowrap, center, center, flex-end);
+        position: fixed;
+        top: 160px;
+        right: 0px;
+        width: 120px;
+        z-index: 200;
+        padding: 0px;
+        @media (max-width: 1023px)
+        {
+            position: relative;
+            width: 100%;
+            @include FlexBoxConfig(flex, row, nowrap, center, center, center);
+            top: 0px;
+            right: 0px;
+        }
+        @media (max-width: 767px)
+        {
+            position: relative;
+            width: 100%;
+            @include FlexBoxConfig(flex, row, nowrap, center, center, center);
+            top: 0px;
+            right: 0px;
+        }
+        .SocialBar__red /*ELEMENTO RED*/
+        {
+            @include FontConfig(#ffffff, 16px, bold, center);
+            width: 80px;
+            padding: 20px 5px;
+            transition: all .5s;
+            &:hover
+            {
+                background-color: black;
+                width: 100%;
+            }
+            @media (max-width: 1023px)
+            {
+                width: 100%;
+            }
+            @media (max-width: 767px)
+            {
+                width: 100%;
+            }    
+        }
+        @each $red, $color in $redes
+        {
+            .SocialBar__red--#{$red} /*MODIFICADOR DE ELEMENTO RED*/
+            {
+                background-color: $color;
+                @each $n, $v in $orders
+                {
+                    @if $red == $n
+                    {
+                        order: $v;
+                    }
+                }
+            }
+        }
+    }
+    .MiWhatsapp /*BLOQUE MIWHATSAPP*/
+    {
+        position: fixed;
+        bottom: 40px;
+        right: 30px;
+        z-index: 200;    
+        .MiWhatsapp__icono /*ELEMENTO ICONO*/
+        {
+            width: 50px;
+            transition: transform 1s;
+            &:hover
+            {
+                transform: rotate(360deg) scale(1.3);
+            }
+        }
+    }
+}
+/*FOOTER DEL SITIO WEB=========================================*/
+.MiFooter /*BLOQUE MIFOOTER*/
+{
+    background-color: $c-sitio-1;
+    .MiFooter__texto /*ELEMENTO TEXTO*/
+    {
+        @include FontConfig(#FFFFFF, 16px, bold, center);
+        margin: 0px;
+        padding: 15px 0px;
+        @media (max-width: 1023px)
+        {
+            @include FontConfig($c-blanco, 1.2rem, normal);
+        }
+        @media (max-width: 767px)
+        {
+            @include FontConfig($c-blanco, .8rem, normal);
+        }
+    }
+}
+/*=============================================================*/
+.TitularSeccion /*BLOQUE TITULAR SECCIÓN*/
+{
+    .TitularSeccion__texto
+    {
+        @include FontConfig(#FFFFFF, 32px, bold, center);
+        margin: 0px;
+        padding: 20px 0px;
+        @media (max-width: 1023px)
+        {
+            font-size: 28px;
+            padding: 10px 0px;
+        }
+        @media (max-width: 767px)
+        {
+            font-size: 18px;
+            padding: 10px 0px;
+        }
+    }
+}
+@each $n, $c in $colores-TitularesFondos /*MODIFICADORES DE COLOR FONDO DEL ELEMENTO TITULARSECCION*/
+{
+    .TitularSeccion--#{$n}
+    {
+        background-color: $c;
+    }
+}
+.TitlePage /*TITULO DE CADA PAGINA*/
+{
+    @include FontConfig($c-sitio-1, 48px, bold, center);
+	margin: 80px 0px 40px;
+    @media (max-width: 1023px)
+    {
+        font-size: 2rem;
+        margin: 75px 0px 20px;
+    }
+    @media (max-width: 767px)
+    {
+        font-size: 1.5rem;
+    }
+}
+/*=============================================================*/
