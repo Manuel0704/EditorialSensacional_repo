@@ -1732,29 +1732,6 @@
   right: -30px;
 }
 
-.MiAside .MiWhatsapp .MiWhatsapp__icono {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  justify-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #FFFFFF;
-  font-size: 40px;
-  font-weight: normal;
-  height: 100%;
-}
-
 /*FOOTER DEL SITIO WEB=========================================*/
 .MiFooter {
   background-color: #0d1b25;
