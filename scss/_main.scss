@@ -160,6 +160,12 @@
         {
             right: -30px;
         }
+        .MiWhatsapp__icono /*ELEMENTO ICONO*/
+        {
+            @include FlexBoxConfig(inline-flex, row, nowrap, flex-start, center, center);
+            @include FontConfig($c-blanco, 40px, normal);
+            height: 100%;
+        }
     }
 }
 /*FOOTER DEL SITIO WEB=========================================*/
