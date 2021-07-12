@@ -1,31 +1,15 @@
-/*TODO EL SITIO*/
+/*TODO EL SITIO================================================*/
 *
 {
 	font-family: 'KoHo', sans-serif;
 	box-sizing: border-box;
-}
-/*ESCALA DE AZULES=============================================*/
-.color-p1-main
-{
-    background-color: $color-principal-1;
-}
-@for $i from 1 through 5 /*VARIACION DE AZULES */
-{
-    .color-p1-claro-#{$i}
-    {
-        background-color: mix(white, $color-principal-1, $i*20%);
-    }
-    .color-p1-oscuro-#{$i}
-    {
-        background-color: mix(black, $color-principal-1, $i*20%);
-    }
 }
 /*BORDES=======================================================*/
 @each $b, $d in $bordes
 {
     .pBorder#{$b}
     {
-        border-#{$d}-radius: 30px;
+        border-#{$d}-radius: 20px;
     }
 }
 /*CABECERA DEL SITIO WEB=======================================*/
@@ -82,27 +66,15 @@
     .SocialBar /*BLOQUE SOCIAL BAR*/
     {
         @include FlexBoxConfig(flex, column, nowrap, center, center, flex-end);
-        position: fixed;
-        top: 160px;
-        right: 0px;
+        @include PositionFRA(fixed, top_right, 160px, 0px);
         width: 120px;
         z-index: 200;
         padding: 0px;
         @media (max-width: 1023px)
         {
-            position: relative;
-            width: 100%;
             @include FlexBoxConfig(flex, row, nowrap, center, center, center);
-            top: 0px;
-            right: 0px;
-        }
-        @media (max-width: 767px)
-        {
-            position: relative;
+            @include PositionFRA(relative, top_right, 0px, 0px);
             width: 100%;
-            @include FlexBoxConfig(flex, row, nowrap, center, center, center);
-            top: 0px;
-            right: 0px;
         }
         .SocialBar__red /*ELEMENTO RED*/
         {
@@ -116,10 +88,6 @@
                 width: 100%;
             }
             @media (max-width: 1023px)
-            {
-                width: 100%;
-            }
-            @media (max-width: 767px)
             {
                 width: 100%;
             }
@@ -141,30 +109,48 @@
     }
     .MiWhatsapp /*BLOQUE MIWHATSAPP*/
     {
+        @include FlexBoxConfig(flex, row, nowrap, space-between, center, center);
+        @include PositionFRA(fixed, bottom_right, 30px, -260px);
         width: 320px;
         height: 60px;
         padding-left: 12.5px;
-        position: fixed;
-        bottom: 30px;
-        right: -260px;
         z-index: 200;
         background-color: #25d366;
         transition: all 1s;
-        @include FlexBoxConfig(flex, row, nowrap, space-between, center, stretch);
-        .MiWhatsapp__text
-        {
-            @include FontConfig($c-blanco, 16px, bold);
-            margin: 5px 35px 0px 15px;
-        }
         &:hover
         {
             right: -30px;
         }
+        @media (max-width: 1023px)
+        {
+            @include PositionFRA(relative, bottom_right, 0px, 0px);
+            width: 100%;
+            padding: 10px 0px;
+            border-radius: 0px !important;
+            justify-content: center;
+        }
+        .MiWhatsapp__text
+        {
+            @include FontConfig($c-blanco, 16px, bold);
+            margin: 0px 35px 0px 15px;
+            @media (max-width: 1023px)
+            {
+                font-size: 14px;
+                margin: 0px;
+            }
+            @media (max-width: 767px)
+            {
+                font-size: 12px;
+            }
+        }
         .MiWhatsapp__icono /*ELEMENTO ICONO*/
         {
-            @include FlexBoxConfig(inline-flex, row, nowrap, flex-start, center, center);
             @include FontConfig($c-blanco, 40px, normal);
-            height: 100%;
+            @media (max-width: 1023px)
+            {
+                font-size: 32px;
+                padding: 0px 10px;
+            }
         }
     }
 }
@@ -174,16 +160,16 @@
     background-color: $c-sitio-1;
     .MiFooter__texto /*ELEMENTO TEXTO*/
     {
-        @include FontConfig(#FFFFFF, 16px, bold, center);
+        @include FontConfig($c-blanco, 16px, bold, center);
         margin: 0px;
         padding: 15px 0px;
         @media (max-width: 1023px)
         {
-            @include FontConfig($c-blanco, 1.2rem, normal);
+            font-size: 1.2rem;
         }
         @media (max-width: 767px)
         {
-            @include FontConfig($c-blanco, .8rem, normal);
+            font-size: .8em;
         }
     }
 }
@@ -203,7 +189,6 @@
         @media (max-width: 767px)
         {
             font-size: 18px;
-            padding: 10px 0px;
         }
     }
 }

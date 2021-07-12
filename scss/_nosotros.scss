@@ -17,7 +17,7 @@
     {
         @include FlexBoxConfig(flex, column, nowrap, center, center, center);
         width: 70%;
-        @include FontConfig(#FFFFFF, 40px, bold);
+        @include FontConfig($c-blanco, 40px, bold);
         padding: 20px 60px;
         @media (max-width: 1023px)
         {
@@ -31,20 +31,16 @@
     }
     .Historia__titulo
     {
-        @include FontConfig(#FFFFFF, 40px, bold);
+        @include FontConfig($c-blanco, 40px, bold);
         padding: 20px 60px;
         @media (max-width: 1023px)
-        {
-            font-size: 24px;
-        }
-        @media (max-width: 767px)
         {
             font-size: 24px;
         }
     }
     .Historia__parrafo
     {
-        @include FontConfig(#FFFFFF, 24px, normal, justify);
+        @include FontConfig($c-blanco, 24px, normal, justify);
         line-height: 2;
         padding: 0px 20px 30px;
         @media (max-width: 1023px)
@@ -76,10 +72,6 @@
     {
         margin: 0px 10px;
     }
-    @media (max-width: 767px)
-    {
-        margin: 0px 10px;
-    }
     .Nosotros__persona
     {
         @include FlexBoxConfig(flex, row, nowrap, center, center, stretch);
@@ -90,18 +82,19 @@
         }
         @media (max-width: 767px)
         {
-            @include FlexBoxConfig(flex, column, nowrap, center, center, stretch);
+            flex-direction: column;
         }    
     }
     .Nosotros__perfil
     {
-        @include FlexBoxConfig(flex, column, nowrap, center, center, center);
-        background-color: #ccc;
+        @include FlexBoxConfig(flex, column, nowrap, space-around, center, center);
+        background-color: $c-sitio-2;
     }
     .Nosotros__nombre
     {
-        @include FontConfig(#000, 30px, bold, center);
-        padding: 10px 15px;
+        @include FontConfig($c-blanco, 25px, bold, center);
+        padding: 15px 5px;
+        margin: 0px;
         @media (max-width: 1023px)
         {
             font-size: 22px;
@@ -130,32 +123,22 @@
             100%
             {transform: scale(1);   }
         }
-        @media (max-width: 1023px)
-        {
-        }
-        @media (max-width: 767px)
-        {
-        }    
     }
     .Nosotros__bio
     {
         display: flex;
-        background-color: #DDDDDD;
-        @media (max-width: 1023px)
-        {
-           
-        }
+        background-color: $c-sitio-4;
         @media (max-width: 767px)
         {
-            padding: 5px;
+            padding: 10px 5px;
         }    
     }
     .Nosotros__texto
     {
-        @include FontConfig($c-negro, 24px, normal, justify);
+        @include FontConfig($c-blanco, 22px, normal, justify);
         line-height: 2;
         align-self: center;
-        margin: 0px 30px;
+        padding: 20px 30px;
         @media (max-width: 1023px)
         {
             font-size: 16px;
@@ -164,6 +147,7 @@
         {
             font-size: 12px;
             margin: 0px 10px;
+            padding: 10px;
         }    
     }
 }

@@ -10,7 +10,7 @@
     }
     @media (max-width: 767px)
     {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 .TextosInicio--subseccion
@@ -18,6 +18,7 @@
     margin: 0px 30px;
     @media (max-width: 767px)
     {
+        font-size: 12px;
         padding-top: 10px;
         margin: 0px;
     }
@@ -116,9 +117,6 @@
     {
         @include FlexBoxConfig(flex, column, nowrap, center, center, center);
         flex-flow: row nowrap;
-        @media (max-width: 1023px)
-        {
-        }
         @media (max-width: 767px)
         {
             flex-direction: column;
@@ -241,26 +239,22 @@
 {
     @include FlexBoxConfig(flex, row, nowrap, center, center, center);
     background-color: #ccc;
-    border-radius: 15px;
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     position: relative;
     @media (max-width: 1023px)
     {
-        // @include FlexBoxConfig(flex, column-reverse, nowrap, center, center, center);
         margin-bottom: 40px;
     }
     @media (max-width: 767px)
     {
-        @include FlexBoxConfig(flex, column-reverse, nowrap, center, center, center);
-        margin-bottom: 40px;
+        flex-direction: column-reverse;
     }
     .MiCard__thumbnail
     {
         width: 650px;
         height: 200px;
         margin-right: 20px;
-        border-radius: 10px;
         overflow: hidden;
         display: inline-block;
         @media (max-width: 1023px)
@@ -269,10 +263,9 @@
         }
         @media (max-width: 767px)
         {
-            width: 100%;
             height: 100%;
             margin: 10px 0px 0px 0px;
-        }    
+        }
     }
     .MiCard_img
     {
@@ -280,33 +273,31 @@
     }
     .MiCard__titulo
     {
-        @include FontConfig(#000, 32px, bold);
+        @include FontConfig($c-negro, 32px, bold);
         margin-bottom: 20px;
         @media (max-width: 1023px)
         {
-            @include FontConfig(#000, 24px, bold);
+            font-size: 24px;
             margin-bottom: 10px;
         }
         @media (max-width: 767px)
         {
-            @include FontConfig(#000, 20px, bold);
-            margin-bottom: 10px;
+            font-size: 20px;
         }    
     }
     .MiCard__parrafo
     {
-        @include FontConfig(#000, 18px, normal, justify);
+        @include FontConfig($c-negro, 18px, normal, justify);
         line-height: 28px;
         margin-bottom: 20px;
         @media (max-width: 1023px)
         {
-            @include FontConfig(#000, 16px, normal);
+            font-size: 16px;
             margin-bottom: .5em;
         }
         @media (max-width: 767px)
         {
-            @include FontConfig(#000, 14px, normal);
-            margin-bottom: .5em;
+            font-size: 14px;
             line-height: 24px;
         }    
     }
@@ -326,18 +317,20 @@
 .MiBoton /*BLOQUE MIBOTON Y SUS ELEMENTOS*/
 {
     @include FlexBoxConfig(inline-flex, row, nowrap, space-evenly, center, center);
-    @include FontConfig(#FFFFFF, 16px, bold);
-    position: absolute;
+    @include PositionFRA(absolute, bottom_right, -1em, 2em);
+    @include FontConfig($c-blanco, 16px, bold);
     background-color: #403cc2;
     text-decoration: none;
-    border: none;
     min-width: 180px;
     height: 50px;
     padding: 0px 30px;
-    border-radius: 50px;
     transition: .3s ease all;
-    bottom: -1em;
-    right: 2rem;
+    &:hover
+    {
+        color: white;
+        background-color: #24216e;
+        text-decoration: none;
+    }
     @media (max-width: 1023px)
     {
         min-width: 10px;
@@ -346,25 +339,16 @@
     }
     @media (max-width: 767px)
     {
-        min-width: 10px;
         width: 50%;
         right: 25%;
-    }
-    &:hover
-    {
-        color: white;
-        background-color: #24216e;
-        text-decoration: none;
     }
 }
 .MiBoton--ProductoLibro
 {
-    position: relative;
+    @include PositionFRA(relative, bottom_right, 0px, 0px);
     background-color: $c-blanco;
     color: $c-negro;
     margin: 1em 0px;
-    bottom: 0px;
-    right: 0px;
     @media (max-width: 1023px)
     {
         min-width: 180px;
@@ -372,7 +356,6 @@
     }
     @media (max-width: 767px)
     {
-        min-width: 180px;
         width: 40%;
     }
     &:hover

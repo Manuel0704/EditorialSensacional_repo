@@ -15,5 +15,28 @@
     @if $align == null {}
     @else if $align != null
     {text-align: $align;}
-
+}
+@mixin PositionFRA($position, $p_align, $p_tb, $p_lr)
+{
+    position: $position;
+    @if $p_align == top_left
+    {
+        top: $p_tb;
+        left: $p_lr;
+    }
+    @if $p_align == top_right
+    {
+        top: $p_tb;
+        right: $p_lr;
+    }
+    @if $p_align == bottom_left
+    {
+        bottom: $p_tb;
+        left: $p_lr;
+    }
+    @if $p_align == bottom_right
+    {
+        bottom: $p_tb;
+        right: $p_lr;
+    }
 }

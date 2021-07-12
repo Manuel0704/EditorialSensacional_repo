@@ -1,16 +1,13 @@
 .Video
 {
-    width: 560px;
-	margin: auto;
+    width: 100%;
+    @include FlexBoxConfig(flex, column, nowrap, center, center, center);
     margin-bottom: 20px;
-    @media (max-width: 1023px)
+    .Video__iframe
     {
-        @include FlexBoxConfig(flex, row, wrap, center, center, center);
-    }
-    @media (max-width: 767px)
-    {
+        max-width: 560px;
         width: 95%;
-        // height: 250px;
+        max-height: 315px;
     }
 }
 .ProductosArea
@@ -36,18 +33,10 @@
         {
             @include FlexBoxConfig(flex, row, wrap, center, center, center);
         }
-        @media (max-width: 767px)
-        {
-            @include FlexBoxConfig(flex, row, wrap, center, center, center);
-        }    
     }
     .Categorias__ItemLista
     {
         margin: 20px auto;
-        @media (max-width: 1023px)
-        {
-
-        }
         @media (max-width: 767px)
         {
             margin: 10px auto;
@@ -57,22 +46,22 @@
     {
         @include FontConfig(null, 14px, normal, center);
         display: inline-block;
+        text-decoration: none;
         background-color: $c-sitio-4;
         width: 200px;
         min-width: 120px;
         padding: 15px 0px;
         transition: all .5s;
+        &:hover
+        {
+            background-color: #1f386d;
+        }
         @media (max-width: 767px)
         {
            font-size: 12px;
            width: 120px;
            padding: 10px 0px;
         }    
-        &:hover
-        {
-            background-color: #1f386d;
-        }
-        text-decoration: none;
     }
 }
 
@@ -82,24 +71,24 @@
     .Libros__contenedor
     {
         padding: 0.5em;
-        .Libros__producto
+    }
+    .Libros__producto
+    {
+        @include FlexBoxConfig(flex, column, nowrap,space-evenly, center, center);
+        background-color: $c-sitio-2;
+    }
+    .Libros__titulo
+    {
+        @include FontConfig($c-blanco, 1.25em, bold);
+        margin: 0.625rem 0px;
+    }
+    .Libros__imagen
+    {
+        width: 75%;
+        transition: transform 1s;
+        &:hover
         {
-            @include FlexBoxConfig(flex, column, nowrap,space-evenly, center, center);
-            background-color: $c-sitio-2;
-            .Libros__titulo
-            {
-                @include FontConfig($c-blanco, 1.25em, bold);
-                margin: 0.625rem 0px;
-            }
-            .Libros__imagen
-            {
-                width: 75%;
-                transition: transform 1s;
-                &:hover
-                {
-                    transform: scale(1.4) translateY(-50px);
-                }
-            }
+            transform: scale(1.4) translateY(-50px);
         }
     }
 }
@@ -114,14 +103,10 @@
             @include FontConfig($c-blanco, 20px, bold, center);
             padding: 1em .2em;
             background-color: $c-sitio-2;
-            @media (max-width: 1023px)
-            {
-        
-            }
             @media (max-width: 767px)
             {
                 font-size: 10px;
-            }        
+            }
         }
     }
     .MiTabla__cuerpo
