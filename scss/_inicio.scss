@@ -79,9 +79,6 @@
     {
         width: 600px;
         margin: auto;
-        @media (max-width: 1023px)
-        {
-        }
         @media (max-width: 767px)
         {
             width: 100%;
@@ -138,15 +135,6 @@
             font-size: 20px;
         }    
     }
-    .Subsecciones__imagen
-    {
-        display: inline-block;
-        width: 200px;
-        @media (max-width: 767px)
-        {
-            width: 150px;
-        }    
-    }
 }
 /*ESTADISTICAS*/
 .SeccionEstadisticas
@@ -174,12 +162,11 @@
     .SeccionEstadisticas__imagen
     {
         width: 90%;
-        @media (max-width: 1023px)
-        {
-        }
+        border: 8px solid $c-sitio-1;
         @media (max-width: 767px)
         {
-        }    
+            border-width: 4px;
+        }
     }
 }
 /*NOVEDADES*/
@@ -199,168 +186,34 @@
 .MiSlider/*SLIDES*/
 {
     height: 100vh;
-    .MiSlider__slide
+    @media (max-width: 767px)
     {
-        position: relative;
+        height: 60vh;
     }
     .MiSlider__texto
     {
-        @include FontConfig(#FFFFFF, 64px, bold);
-        position: absolute;
+        @include FontConfig($c-blanco, 64px, bold);
+        @include PositionFRA(absolute, top_left, 120px, 40px);
         text-transform: initial;
-        font-style: italic;
-        top: 120px;
-        left: 40px;
         @media (max-width: 1023px)
         {
             font-size: 48px;
         }
         @media (max-width: 767px)
         {
-            font-size: 32px;
+            font-size: 30px;
         }
     }
-}
-.MiContenedor /*BLOQUE CONTENEDOR DE NOVEDADES*/
-{
-    margin: 0px 120px 0px 40px;
-    @media (max-width: 1023px)
+    .MiSlider__texto--secundario
     {
-        width: 95%;
-        margin: auto;
-    }
-    @media (max-width: 767px)
-    {
-        width: 95%;
-        margin: auto;
-    }
-}
-.MiCard /*BLOQUE MICARD Y SUS ELEMENTOS*/
-{
-    @include FlexBoxConfig(flex, row, nowrap, center, center, center);
-    background-color: #ccc;
-    padding: 20px;
-    margin-bottom: 30px;
-    position: relative;
-    @media (max-width: 1023px)
-    {
-        margin-bottom: 40px;
-    }
-    @media (max-width: 767px)
-    {
-        flex-direction: column-reverse;
-    }
-    .MiCard__thumbnail
-    {
-        width: 650px;
-        height: 200px;
-        margin-right: 20px;
-        overflow: hidden;
-        display: inline-block;
+        font-size: 56px;
         @media (max-width: 1023px)
         {
-            width: 100%;
+            font-size: 40px;
         }
         @media (max-width: 767px)
-        {
-            height: 100%;
-            margin: 10px 0px 0px 0px;
-        }
-    }
-    .MiCard_img
-    {
-        width: 100%;
-    }
-    .MiCard__titulo
-    {
-        @include FontConfig($c-negro, 32px, bold);
-        margin-bottom: 20px;
-        @media (max-width: 1023px)
         {
             font-size: 24px;
-            margin-bottom: 10px;
         }
-        @media (max-width: 767px)
-        {
-            font-size: 20px;
-        }    
-    }
-    .MiCard__parrafo
-    {
-        @include FontConfig($c-negro, 18px, normal, justify);
-        line-height: 28px;
-        margin-bottom: 20px;
-        @media (max-width: 1023px)
-        {
-            font-size: 16px;
-            margin-bottom: .5em;
-        }
-        @media (max-width: 767px)
-        {
-            font-size: 14px;
-            line-height: 24px;
-        }    
-    }
-}
-.MiCard--reciente /*MODIFICADOR DEL BLOQUE MICARD*/
-{
-    background-color: #1B2A41;
-    .MiCard__titulo
-    {
-        color: white;
-    }
-    .MiCard__parrafo
-    {
-        @extend .MiCard__titulo;
-    }
-}
-.MiBoton /*BLOQUE MIBOTON Y SUS ELEMENTOS*/
-{
-    @include FlexBoxConfig(inline-flex, row, nowrap, space-evenly, center, center);
-    @include PositionFRA(absolute, bottom_right, -1em, 2em);
-    @include FontConfig($c-blanco, 16px, bold);
-    background-color: #403cc2;
-    text-decoration: none;
-    min-width: 180px;
-    height: 50px;
-    padding: 0px 30px;
-    transition: .3s ease all;
-    &:hover
-    {
-        color: white;
-        background-color: #24216e;
-        text-decoration: none;
-    }
-    @media (max-width: 1023px)
-    {
-        min-width: 10px;
-        width: 20%;
-        right: 40%;
-    }
-    @media (max-width: 767px)
-    {
-        width: 50%;
-        right: 25%;
-    }
-}
-.MiBoton--ProductoLibro
-{
-    @include PositionFRA(relative, bottom_right, 0px, 0px);
-    background-color: $c-blanco;
-    color: $c-negro;
-    margin: 1em 0px;
-    @media (max-width: 1023px)
-    {
-        min-width: 180px;
-        width: 20%;
-    }
-    @media (max-width: 767px)
-    {
-        width: 40%;
-    }
-    &:hover
-    {
-        color: $c-negro;
-        background-color: #cfcfcf;
     }
 }

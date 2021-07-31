@@ -146,6 +146,10 @@
         .MiWhatsapp__icono /*ELEMENTO ICONO*/
         {
             @include FontConfig($c-blanco, 40px, normal);
+            &:hover
+            {
+                color: $c-negro;
+            }
             @media (max-width: 1023px)
             {
                 font-size: 32px;
@@ -173,8 +177,8 @@
         }
     }
 }
-/*=============================================================*/
-.TitularSeccion /*BLOQUE TITULAR SECCIÓN*/
+/*BLOQUE TITULAR SECCIÓN=======================================*/
+.TitularSeccion 
 {
     .TitularSeccion__texto
     {
@@ -192,14 +196,15 @@
         }
     }
 }
-@each $n, $c in $colores-TitularesFondos /*MODIFICADORES DE COLOR FONDO DEL ELEMENTO TITULARSECCION*/
+@each $n, $c in $colores-TitularesFondos
 {
     .TitularSeccion--#{$n}
     {
         background-color: $c;
     }
 }
-.TitlePage /*TITULO DE CADA PAGINA*/
+/*TITULO DE CADA PAGINA========================================*/
+.TitlePage
 {
     @include FontConfig($c-sitio-1, 48px, bold, center);
 	margin: 80px 0px 40px;
@@ -213,4 +218,57 @@
         font-size: 1.5rem;
     }
 }
-/*=============================================================*/
+/*BLOQUE BOTON======================================================*/
+.Bbtn
+{
+    @include FontConfig($c-blanco, 16px, normal);
+    @include PositionFRA(absolute, bottom_right, 0px, 0px);
+    background-color: $c-sitio-2;
+    padding: 12px 20px;
+    border: none;
+    &:hover
+    {
+        color: $c-blanco;
+        background-color: $c-sitio-4;
+    }
+    &:focus
+    {
+        box-shadow: none;
+    }
+    @media (max-width: 1023px)
+    {
+        font-size: 14px;
+    }
+    @media (max-width: 767px)
+    {
+        font-size: 12px;
+        position: relative;
+        padding: 10px 15px;
+    }
+}
+.Bbtn--category
+{
+    font-size: 14px;
+    position: relative;
+    width: 200px;
+    padding: 15px 0px;
+    &:hover
+    {
+        background-color: $c-sitio-1;
+    }
+}
+.Bbtn--product
+{
+    @include FontConfig($c-negro, 16px, bold);
+    position: relative;
+    background-color: $c-blanco;
+    border-radius: 0px;
+    margin: 16px 0px;
+    padding: 14px 0px;
+    width: 180px;
+    &:hover
+    {
+        background-color: $c-sitio-1;
+    }
+
+}

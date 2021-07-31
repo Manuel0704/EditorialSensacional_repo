@@ -57,11 +57,11 @@
 		<!----------------------------------------------------------------------->
 		<h1 id="titleProductos" class="TitlePage">Sobre nuestros productos</h1>
 		<!----------------------------------------------------------------------->
-		<!--Video de presentación de los productos---------------->
+		<!--Video de presentación de los productos------------------------------->
 		<div class="Video">
 			<iframe class="Video__iframe" width="560" height="315" src="https://www.youtube.com/embed/SQ00DVrsVGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
-		<!--Area de Productos------------>
+		<!--Area de Productos---------------------------------------------------->
 		<div class="ProductosArea container">
 			<div class="row">
 				<!--Filtro de Categorias--------------------->
@@ -69,40 +69,40 @@
 					<h4 class="Categorias__titulo">Filtro por Categorías</h4>
 					<ul class="Categorias__lista">
 						<li class="Categorias__ItemLista">
-							<a class="Categorias__enlace text-white rounded-pill" href="productos.html">Categoría 1 <i class="fas fa-filter"></i></a>
+							<a class="Bbtn Bbtn--category btn rounded-pill" href="productos.html" role="button">Educativos	<i class="fas fa-filter"></i></a>
 						</li>
 						<li class="Categorias__ItemLista">
-							<a class="Categorias__enlace text-white rounded-pill" href="productos.html">Categoría 2 <i class="fas fa-filter"></i></a>
+							<a class="Bbtn Bbtn--category btn rounded-pill" href="productos.html" role="button">Ciencia Ficción	<i class="fas fa-filter"></i></a>
 						</li>
 						<li class="Categorias__ItemLista">
-							<a class="Categorias__enlace text-white rounded-pill" href="productos.html">Categoría 3 <i class="fas fa-filter"></i></a>
+							<a class="Bbtn Bbtn--category btn rounded-pill" href="productos.html" role="button">Drama	<i class="fas fa-filter"></i></a>
 						</li>
 						<li class="Categorias__ItemLista">
-							<a class="Categorias__enlace text-white rounded-pill" href="productos.html">Categoría 4 <i class="fas fa-filter"></i></a>
+							<a class="Bbtn Bbtn--category btn rounded-pill" href="productos.html" role="button">Novelas	<i class="fas fa-filter"></i></a>
 						</li>
 						<li class="Categorias__ItemLista">
-							<a class="Categorias__enlace text-white rounded-pill" href="productos.html">Categoría 5 <i class="fas fa-filter"></i></a>
+							<a class="Bbtn Bbtn--category btn rounded-pill" href="productos.html" role="button">Inglés	<i class="fas fa-filter"></i></a>
 						</li>
 						<li class="Categorias__ItemLista">
-							<a class="Categorias__enlace text-white rounded-pill" href="productos.html">Categoría 6 <i class="fas fa-filter"></i></a>
+							<a class="Bbtn Bbtn--category btn rounded-pill" href="productos.html" role="button">Enciclopedias	<i class="fas fa-filter"></i></a>
 						</li>
 						<li class="Categorias__ItemLista">
-							<a class="Categorias__enlace text-white rounded-pill" href="productos.html">Categoría 7 <i class="fas fa-filter"></i></a>
+							<a class="Bbtn Bbtn--category btn rounded-pill" href="productos.html" role="button">Cursos	<i class="fas fa-filter"></i></a>
 						</li>
 						<li class="Categorias__ItemLista">
-							<a class="Categorias__enlace text-white rounded-pill" href="productos.html">Categoría 8 <i class="fas fa-filter"></i></a>
+							<a class="Bbtn Bbtn--category btn rounded-pill" href="productos.html" role="button">Comics	<i class="fas fa-filter"></i></a>
 						</li>
 						<li class="Categorias__ItemLista">
-							<a class="Categorias__enlace text-white rounded-pill" href="productos.html">Categoría 9 <i class="fas fa-filter"></i></a>
+							<a class="Bbtn Bbtn--category btn rounded-pill" href="productos.html" role="button">Recopilaciones	<i class="fas fa-filter"></i></a>
 						</li>
 						<li class="Categorias__ItemLista">
-							<a class="Categorias__enlace text-white rounded-pill" href="productos.html">Categoría 10 <i class="fas fa-filter"></i></a>
+							<a class="Bbtn Bbtn--category btn rounded-pill" href="productos.html" role="button">Biografías	<i class="fas fa-filter"></i></a>
 						</li>
 						<li class="Categorias__ItemLista">
-							<a class="Categorias__enlace text-white rounded-pill" href="productos.html">Categoría 11 <i class="fas fa-filter"></i></a>
+							<a class="Bbtn Bbtn--category btn rounded-pill" href="productos.html" role="button">Informartivos	<i class="fas fa-filter"></i></a>
 						</li>
 						<li class="Categorias__ItemLista">
-							<a class="Categorias__enlace text-white rounded-pill" href="productos.html">Categoría 12 <i class="fas fa-filter"></i></a>
+							<a class="Bbtn Bbtn--category btn rounded-pill" href="productos.html" role="button">Ensayos	<i class="fas fa-filter"></i></a>
 						</li>
 					</ul>
 				</div>
@@ -112,100 +112,350 @@
 						<!--Contenedor necesario para espaciar cada producto---------->
 						<div class="Libros__contenedor col-xl-4 col-md-4 col-sm-12 h-100">
 							<div class="Libros__producto">
-								<h5 class="Libros__titulo">TituloProducto</h5>
-								<img class="Libros__imagen" src="../media/libros/libro4.jpg" alt="producto imagen">
-								<a class="MiBoton MiBoton--ProductoLibro" href="../media/libros/libro4.jpg" target="_blank">
-									<span class="MiBoton__texto">Ver más</span>
-									<i class="fas fa-plus"></i>
-								</a>
+								<!--Título e imagen del producto-->
+								<h5 class="Libros__titulo">Enciclopedia Sensacional: Biología</h5>
+								<picture class="text-center">
+									<source srcset="../media/libros/libro1/libro1_medium.webp" media="(max-width: 425px)">
+									<source srcset="../media/libros/libro1/libro1_big.webp" media="(max-width: 767px)">
+									<source srcset="../media/libros/libro1/libro1_medium.webp" media="(max-width: 1023px)">
+									<img class="Libros__imagen" src="../media/libros/libro1/libro1.webp" alt="producto imagen">
+								</picture>				
+								<!-- Botón para mostrar el modal component -->
+								<button type="button" class="Bbtn Bbtn--product btn" data-toggle="modal" data-target="#exampleModal_p1">Ver más	<i class="fas fa-plus"></i>
+								</button>
+								<!-- Modal -->
+								<div class="modal fade" id="exampleModal_p1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered">
+										<div class="modal-content">
+											<!--Cabecera con titulo y boton x-->
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLabel">Enciclopedia Sensacional: Biología</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<!--Cuerpo del modal-->
+											<div class="modal-body">
+												La lectura de la Enciclopedia Sensacional: Biología le permitirá un
+												acercamiento a los conceptos centrales sobre las características de la vida y sobre la diversidad biológica.
+												En cada bloque usted encontrará una introducción general al tema
+												correspondiente. El objetivo de esta introducción es ubicarlo en cuáles serán los temas centrales a tratar en el desarrollo de esta unidad.
+												Luego se exponen sintéticamente los contenidos de la unidad y,
+												finalmente, se presenta la bibliografía sugerida para el estudio.
+											</div>
+											<!--Pie del modal con el botón cerrar-->
+											<div class="modal-footer">
+												<button type="button" class="Bbtn btn btn-primary position-relative rounded-pill" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 						<!--Contenedor necesario para espaciar cada producto---------->
 						<div class="Libros__contenedor col-xl-4 col-md-4 col-sm-12 col- h-100">
 							<div class="Libros__producto">
-								<h5 class="Libros__titulo">TituloProducto</h5>
-								<img class="Libros__imagen" src="../media/libros/libro4.jpg" alt="producto imagen">
-								<a class="MiBoton MiBoton--ProductoLibro" href="../media/libros/libro4.jpg" target="_blank">
-									<span class="MiBoton__texto">Ver más</span>
-									<i class="fas fa-plus"></i>
-								</a>
+								<!--Título e imagen del producto-->
+								<h5 class="Libros__titulo">Enciclopedia Sensacional: Física</h5>
+								<picture class="text-center">
+									<source srcset="../media/libros/libro1/libro1_medium.webp" media="(max-width: 425px)">
+									<source srcset="../media/libros/libro1/libro1_big.webp" media="(max-width: 767px)">
+									<source srcset="../media/libros/libro1/libro1_medium.webp" media="(max-width: 1023px)">
+									<img class="Libros__imagen" src="../media/libros/libro1/libro1.webp" alt="producto imagen">
+								</picture>				
+								<!-- Botón para mostrar el modal component -->
+								<button type="button" class="Bbtn Bbtn--product btn" data-toggle="modal" data-target="#exampleModal_p2">Ver más	<i class="fas fa-plus"></i>
+								</button>
+								<!-- Modal -->
+								<div class="modal fade" id="exampleModal_p2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered">
+										<div class="modal-content">
+											<!--Cabecera con titulo y boton x-->
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLabel">Enciclopedia Sensacional: Física</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<!--Cuerpo del modal-->
+											<div class="modal-body">
+												Actualmente existe acuerdo social sobre la importancia de la enseñanza y el aprendizaje de las Ciencias Naturales en general, y de la Física en particular. Este acuerdo se fundamenta en la necesidad de profundizar una formación crítica, que nos permita conocer y comprender cuestiones relacionadas con el desarrollo científico y tecnológico, para poder así tomar decisiones y defender de un modo más apropiado los derechos democráticos de cada ciudadano, del presente y de las generaciones futuras.
+												A tal efecto, a lo largo de este Módulo iremos desarrollando diversos contenidos de Física, integrándolos con la realidad cotidiana y, en lo posible, teniendo en cuenta los factores económicos involucrados
+											</div>
+											<!--Pie del modal con el botón cerrar-->
+											<div class="modal-footer">
+												<button type="button" class="Bbtn btn btn-primary position-relative rounded-pill" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 						<!--Contenedor necesario para espaciar cada producto---------->
 						<div class="Libros__contenedor col-xl-4 col-md-4 col-sm-12 h-100">
 							<div class="Libros__producto">
-								<h5 class="Libros__titulo">TituloProducto</h5>
-								<img class="Libros__imagen" src="../media/libros/libro4.jpg" alt="producto imagen">
-								<a class="MiBoton MiBoton--ProductoLibro" href="../media/libros/libro4.jpg" target="_blank">
-									<span class="MiBoton__texto">Ver más</span>
-									<i class="fas fa-plus"></i>
-								</a>
+								<!--Título e imagen del producto-->
+								<h5 class="Libros__titulo">Enciclopedia Sensacional: Matemática</h5>
+								<picture class="text-center">
+									<source srcset="../media/libros/libro1/libro1_medium.webp" media="(max-width: 425px)">
+									<source srcset="../media/libros/libro1/libro1_big.webp" media="(max-width: 767px)">
+									<source srcset="../media/libros/libro1/libro1_medium.webp" media="(max-width: 1023px)">
+									<img class="Libros__imagen" src="../media/libros/libro1/libro1.webp" alt="producto imagen">
+								</picture>				
+								<!-- Botón para mostrar el modal component -->
+								<button type="button" class="Bbtn Bbtn--product btn" data-toggle="modal" data-target="#exampleModal_p3">Ver más	<i class="fas fa-plus"></i>
+								</button>
+								<!-- Modal -->
+								<div class="modal fade" id="exampleModal_p3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered">
+										<div class="modal-content">
+											<!--Cabecera con titulo y boton x-->
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLabel">Enciclopedia Sensacional: Matemática</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<!--Cuerpo del modal-->
+											<div class="modal-body">
+												Algunas de las más tradicionales ramas de las matemáticas, disciplinas como la geometría y el álgebra, ponen de manifiesto con su propia denominación la procedencia. de las fuentes antiguas de esta ciencia. Los tiempos modernos han visto nacer nuevas ramas que completan un amplio conjunto de conocimientos: el análisis diferencial e integral, la probabilidad, la estadística y la metodología matemática.
+												Las matemáticas representan una ciencia que engloba, a través del razonamiento y la lógica, el estudio de entes abstractos tales como los números, las figuras geométricas, la filosofía del entorno que los comprende y las relaciones y operaciones que conectan estos distintos conceptos entre sí. 
+											</div>
+											<!--Pie del modal con el botón cerrar-->
+											<div class="modal-footer">
+												<button type="button" class="Bbtn btn btn-primary position-relative rounded-pill" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 						<!--Contenedor necesario para espaciar cada producto---------->
 						<div class="Libros__contenedor col-xl-4 col-md-4 col-sm-12 h-100">
 							<div class="Libros__producto">
-								<h5 class="Libros__titulo">TituloProducto</h5>
-								<img class="Libros__imagen" src="../media/libros/libro4.jpg" alt="producto imagen">
-								<a class="MiBoton MiBoton--ProductoLibro" href="../media/libros/libro4.jpg" target="_blank">
-									<span class="MiBoton__texto">Ver más</span>
-									<i class="fas fa-plus"></i>
-								</a>
+								<!--Título e imagen del producto-->
+								<h5 class="Libros__titulo">Inglés Sensacional I</h5>
+								<picture class="text-center">
+									<source srcset="../media/libros/libro1/libro1_medium.webp" media="(max-width: 425px)">
+									<source srcset="../media/libros/libro1/libro1_big.webp" media="(max-width: 767px)">
+									<source srcset="../media/libros/libro1/libro1_medium.webp" media="(max-width: 1023px)">
+									<img class="Libros__imagen" src="../media/libros/libro1/libro1.webp" alt="producto imagen">
+								</picture>
+								<!-- Botón para mostrar el modal component -->
+								<button type="button" class="Bbtn Bbtn--product btn" data-toggle="modal" data-target="#exampleModal_p4">Ver más	<i class="fas fa-plus"></i>
+								</button>
+								<!-- Modal -->
+								<div class="modal fade" id="exampleModal_p4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered">
+										<div class="modal-content">
+											<!--Cabecera con titulo y boton x-->
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLabel">Inglés Sensacional I</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<!--Cuerpo del modal-->
+											<div class="modal-body">
+												En este primer tomo de inglés se recopila el resumen de la gramática básica inglesa y cubre temas como verbo, pronombres, adjetivos, conjugación de verbos en distintos tiempos e incluye ejemplos practicos para usar en la vida cotidiana.
+											</div>
+											<!--Pie del modal con el botón cerrar-->
+											<div class="modal-footer">
+												<button type="button" class="Bbtn btn btn-primary position-relative rounded-pill" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 						<!--Contenedor necesario para espaciar cada producto---------->
 						<div class="Libros__contenedor col-xl-4 col-md-4 col-sm-12 h-100">
 							<div class="Libros__producto">
-								<h5 class="Libros__titulo">TituloProducto</h5>
-								<img class="Libros__imagen" src="../media/libros/libro4.jpg" alt="producto imagen">
-								<a class="MiBoton MiBoton--ProductoLibro" href="../media/libros/libro4.jpg" target="_blank">
-									<span class="MiBoton__texto">Ver más</span>
-									<i class="fas fa-plus"></i>
-								</a>
+								<!--Título e imagen del producto-->
+								<h5 class="Libros__titulo">Inglés Sensacional II</h5>
+								<picture class="text-center">
+									<source srcset="../media/libros/libro1/libro1_medium.webp" media="(max-width: 425px)">
+									<source srcset="../media/libros/libro1/libro1_big.webp" media="(max-width: 767px)">
+									<source srcset="../media/libros/libro1/libro1_medium.webp" media="(max-width: 1023px)">
+									<img class="Libros__imagen" src="../media/libros/libro1/libro1.webp" alt="producto imagen">
+								</picture>				
+								<!-- Botón para mostrar el modal component -->
+								<button type="button" class="Bbtn Bbtn--product btn" data-toggle="modal" data-target="#exampleModal_p5">Ver más	<i class="fas fa-plus"></i>
+								</button>
+								<!-- Modal -->
+								<div class="modal fade" id="exampleModal_p5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered">
+										<div class="modal-content">
+											<!--Cabecera con titulo y boton x-->
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLabel">Inglés Sensacional II</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<!--Cuerpo del modal-->
+											<div class="modal-body">
+												Diseñado por nuestro de equipo de docentes de inglés, el objetivo de este segundo tomo es que puedas aprender la mayor cantidad posible de temáticas para que tengas un entendimiento básico – intermedio del inglés al terminarlo. Se encuentra dividido en 76 capítulos y con el lograrás desarrollar las habilidades de “escuchar, leer, escribir y dialogar”.
+											</div>
+											<!--Pie del modal con el botón cerrar-->
+											<div class="modal-footer">
+												<button type="button" class="Bbtn btn btn-primary position-relative rounded-pill" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 						<!--Contenedor necesario para espaciar cada producto---------->
 						<div class="Libros__contenedor col-xl-4 col-md-4 col-sm-12 h-100">
 							<div class="Libros__producto">
-								<h5 class="Libros__titulo">TituloProducto</h5>
-								<img class="Libros__imagen" src="../media/libros/libro4.jpg" alt="producto imagen">
-								<a class="MiBoton MiBoton--ProductoLibro" href="../media/libros/libro4.jpg" target="_blank">
-									<span class="MiBoton__texto">Ver más</span>
-									<i class="fas fa-plus"></i>
-								</a>
+								<!--Título e imagen del producto-->
+								<h5 class="Libros__titulo">Inglés Sensacional III</h5>
+								<picture class="text-center">
+									<source srcset="../media/libros/libro1/libro1_medium.webp" media="(max-width: 425px)">
+									<source srcset="../media/libros/libro1/libro1_big.webp" media="(max-width: 767px)">
+									<source srcset="../media/libros/libro1/libro1_medium.webp" media="(max-width: 1023px)">
+									<img class="Libros__imagen" src="../media/libros/libro1/libro1.webp" alt="producto imagen">
+								</picture>				
+								<!-- Botón para mostrar el modal component -->
+								<button type="button" class="Bbtn Bbtn--product btn" data-toggle="modal" data-target="#exampleModal_p6">Ver más	<i class="fas fa-plus"></i>
+								</button>
+								<!-- Modal -->
+								<div class="modal fade" id="exampleModal_p6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered">
+										<div class="modal-content">
+											<!--Cabecera con titulo y boton x-->
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLabel">Inglés Sensacional III</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<!--Cuerpo del modal-->
+											<div class="modal-body">
+												Este es el tomo más avanzado de todos puesto que está enteramente escrito en inglés. Te enseña el uso de la gramática en inglés por medio de varios ejemplos. Al terminar este libro tendrás experiencia de nivel avanzado para poder hablar inglés naturalmente en cualquier situación.
+											</div>
+											<!--Pie del modal con el botón cerrar-->
+											<div class="modal-footer">
+												<button type="button" class="Bbtn btn btn-primary position-relative rounded-pill" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 						<!--Contenedor necesario para espaciar cada producto---------->
 						<div class="Libros__contenedor col-xl-4 col-md-4 col-sm-12 h-100">
 							<div class="Libros__producto">
-								<h5 class="Libros__titulo">TituloProducto</h5>
-								<img class="Libros__imagen" src="../media/libros/libro4.jpg" alt="producto imagen">
-								<a class="MiBoton MiBoton--ProductoLibro" href="../media/libros/libro4.jpg" target="_blank">
-									<span class="MiBoton__texto">Ver más</span>
-									<i class="fas fa-plus"></i>
-								</a>
+								<!--Título e imagen del producto-->
+								<h5 class="Libros__titulo">Fundamentos de la Programación</h5>
+								<picture class="text-center">
+									<source srcset="../media/libros/libro1/libro1_medium.webp" media="(max-width: 425px)">
+									<source srcset="../media/libros/libro1/libro1_big.webp" media="(max-width: 767px)">
+									<source srcset="../media/libros/libro1/libro1_medium.webp" media="(max-width: 1023px)">
+									<img class="Libros__imagen" src="../media/libros/libro1/libro1.webp" alt="producto imagen">
+								</picture>				
+								<!-- Botón para mostrar el modal component -->
+								<button type="button" class="Bbtn Bbtn--product btn" data-toggle="modal" data-target="#exampleModal_p7">Ver más	<i class="fas fa-plus"></i>
+								</button>
+								<!-- Modal -->
+								<div class="modal fade" id="exampleModal_p7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered">
+										<div class="modal-content">
+											<!--Cabecera con titulo y boton x-->
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLabel">Fundamentos de la Programación</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<!--Cuerpo del modal-->
+											<div class="modal-body">
+												Hecho especificamente para aquellos que quieran adentrarse al mundo de la programación. Con este libro lograrás crear algoritmos y pseudocodigo para diseñar programas que exhiban un comportamiento deseado.
+											</div>
+											<!--Pie del modal con el botón cerrar-->
+											<div class="modal-footer">
+												<button type="button" class="Bbtn btn btn-primary position-relative rounded-pill" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 						<!--Contenedor necesario para espaciar cada producto---------->
 						<div class="Libros__contenedor col-xl-4 col-md-4 col-sm-12 h-100">
 							<div class="Libros__producto">
-								<h5 class="Libros__titulo">TituloProducto</h5>
-								<img class="Libros__imagen" src="../media/libros/libro4.jpg" alt="producto imagen">
-								<a class="MiBoton MiBoton--ProductoLibro" href="../media/libros/libro4.jpg" target="_blank">
-									<span class="MiBoton__texto">Ver más</span>
-									<i class="fas fa-plus"></i>
-								</a>
+								<!--Título e imagen del producto-->
+								<h5 class="Libros__titulo">Desarrollo Web</h5>
+								<picture class="text-center">
+									<source srcset="../media/libros/libro1/libro1_medium.webp" media="(max-width: 425px)">
+									<source srcset="../media/libros/libro1/libro1_big.webp" media="(max-width: 767px)">
+									<source srcset="../media/libros/libro1/libro1_medium.webp" media="(max-width: 1023px)">
+									<img class="Libros__imagen" src="../media/libros/libro1/libro1.webp" alt="producto imagen">
+								</picture>				
+								<!-- Botón para mostrar el modal component -->
+								<button type="button" class="Bbtn Bbtn--product btn" data-toggle="modal" data-target="#exampleModal_p8">Ver más	<i class="fas fa-plus"></i>
+								</button>
+								<!-- Modal -->
+								<div class="modal fade" id="exampleModal_p8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered">
+										<div class="modal-content">
+											<!--Cabecera con titulo y boton x-->
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLabel">Desarrollo Web</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<!--Cuerpo del modal-->
+											<div class="modal-body">
+												Este libro te  proveerá de los conocimientos básicos que tienes que saber para crear un sitio web para internet, entre ellos HTML, CSS, SASS, Bootstrap, etc.
+											</div>
+											<!--Pie del modal con el botón cerrar-->
+											<div class="modal-footer">
+												<button type="button" class="Bbtn btn btn-primary position-relative rounded-pill" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 						<!--Contenedor necesario para espaciar cada producto---------->
 						<div class="Libros__contenedor col-xl-4 col-md-4 col-sm-12 h-100">
 							<div class="Libros__producto">
-								<h5 class="Libros__titulo">TituloProducto</h5>
-								<img class="Libros__imagen" src="../media/libros/libro4.jpg" alt="producto imagen">
-								<a class="MiBoton MiBoton--ProductoLibro" href="../media/libros/libro4.jpg" target="_blank">
-									<span class="MiBoton__texto">Ver más</span>
-									<i class="fas fa-plus"></i>
-								</a>
+								<!--Título e imagen del producto-->
+								<h5 class="Libros__titulo">Ciencia de Datos</h5>
+								<picture class="text-center">
+									<source srcset="../media/libros/libro1/libro1_medium.webp" media="(max-width: 425px)">
+									<source srcset="../media/libros/libro1/libro1_big.webp" media="(max-width: 767px)">
+									<source srcset="../media/libros/libro1/libro1_medium.webp" media="(max-width: 1023px)">
+									<img class="Libros__imagen" src="../media/libros/libro1/libro1.webp" alt="producto imagen">
+								</picture>				
+								<!-- Botón para mostrar el modal component -->
+								<button type="button" class="Bbtn Bbtn--product btn" data-toggle="modal" data-target="#exampleModal_p9">Ver más	<i class="fas fa-plus"></i>
+								</button>
+								<!-- Modal -->
+								<div class="modal fade" id="exampleModal_p9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered">
+										<div class="modal-content">
+											<!--Cabecera con titulo y boton x-->
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLabel">Ciencia de Datos</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<!--Cuerpo del modal-->
+											<div class="modal-body">
+												Ciencia de Datos de la Editoria Sensacional te introducirá los conocimientos necesarios para entender analiticamente los procesos para extraer datos y serás capaz de crear soluciones basadas en datos.
+											</div>
+											<!--Pie del modal con el botón cerrar-->
+											<div class="modal-footer">
+												<button type="button" class="Bbtn btn btn-primary position-relative rounded-pill" data-dismiss="modal">Cerrar</button>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 						<!------------------------------->
@@ -214,20 +464,21 @@
 				<!------------------------------------------->
 			</div>
 		</div>
-		<!-------------------------------------------------------->
+		<!--Tabla---------------------------------------------------------------->
 		<table class="propTableProducts MiTabla">
+			<!--Cabecera de tabla--------------------------------->
 			<thead class="propThead MiTabla__cabecera">
-				<td class="MiTabla__data">Nuestros productos</td>
-				<td class="MiTabla__data">Información Detallada</td>
+				<td width=25% class="MiTabla__data">Nuestros productos</td>
+				<td width=25% class="MiTabla__data">Información Detallada</td>
 				<td class="MiTabla__data">Descripción</td>
-				<td class="MiTabla__data">Comentarios</td>
 			</thead>
+			<!--Cuerpo de tabla----------------------------------->
 			<tbody class="propTbody MiTabla__cuerpo">
-				<!--========================================-->
+				<!--Fila 1--------------------------------------->
 				<tr class="evenRow MiTabla__Cpar">
-					<!------------------------------------------->
+					<!-------------------------------------------->
 					<td class="MiTabla__data">Enciclopedias</td>
-					<!------------------------------------------->
+					<!-------------------------------------------->
 					<td class="MiTabla__data">
 						<ul class="MiTabla__lista">
 						    <li>Enciclopedia Sensacional: Biología</li>
@@ -235,26 +486,17 @@
 						    <li>Enciclopedia Sensacional: Matemática</li>
 						</ul>
 					</td>
-					<!------------------------------------------->
+					<!-------------------------------------------->
 					<td class="MiTabla__data">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore edolore magna aliqua.
+						En esta colección de 3 enciclopedias encontrarás una vasta información sobre biología, física y matemática. Todas las fuentes de información usadas para ello fueron recopiladas de las fuentes de información más actuales y confiables.
 					</td>
-					<!------------------------------------------->
-					<td class="MiTabla__data">
-						<ul class="MiTabla__lista">
-						    <li>Comentario 1</li>
-						    <li>Comentario 2</li>
-						    <li>Comentario 3</li>
-						    <li>Comentario 4</li>
-						</ul>
-					</td>
-					<!------------------------------------------->
+					<!-------------------------------------------->
 				</tr>
-				<!--========================================-->
+				<!--Fila 2---------------------------------------->
 				<tr class="oddRow MiTabla__Cimpar">
-					<!------------------------------------------->
+					<!-------------------------------------------->
 					<td class="MiTabla__data">Inglés</td>
-					<!------------------------------------------->
+					<!-------------------------------------------->
 					<td class="MiTabla__data">
 						<ul class="MiTabla__lista">
 						    <li>Inglés Sensacional I</li>
@@ -262,26 +504,17 @@
 						    <li>Inglés Sensacional III</li>
 						</ul>
 					</td>
-					<!------------------------------------------->
+					<!-------------------------------------------->
 					<td class="MiTabla__data">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore edolore magna aliqua.
+						Habla inglés fluidamente con los 3 tomos de la Editorial Sensacional que traen desde el nivel básico hasta el avanzado.
 					</td>
-					<!------------------------------------------->
-					<td class="MiTabla__data">
-						<ul class="MiTabla__lista">
-						    <li>Comentario 1</li>
-						    <li>Comentario 2</li>
-						    <li>Comentario 3</li>
-						    <li>Comentario 4</li>
-						</ul>
-					</td>
-					<!------------------------------------------->
+					<!-------------------------------------------->
 				</tr>
-				<!--========================================-->
+				<!--Fila 3---------------------------------------->
 				<tr class="evenRow MiTabla__Cpar">
-					<!------------------------------------------->
+					<!-------------------------------------------->
 					<td class="MiTabla__data">Cursos</td>
-					<!------------------------------------------->
+					<!-------------------------------------------->
 					<td class="MiTabla__data">
 						<ul class="MiTabla__lista">
 						    <li>Fundamentos de la Programación</li>
@@ -289,52 +522,36 @@
 						    <li>Ciencia de Datos</li>
 						</ul>
 					</td>
-					<!------------------------------------------->
+					<!-------------------------------------------->
 					<td class="MiTabla__data">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore edolore magna aliqua.
+						Si no logras decidir que estudiar, nuestra colección de cursos te brinda 3 opciones que incluyen Fundamentos de la Programación, Desarrollo Web y Ciencia de Datos.
 					</td>
-					<!------------------------------------------->
-					<td class="MiTabla__data">
-						<ul class="MiTabla__lista">
-						    <li>Comentario 1</li>
-						    <li>Comentario 2</li>
-						    <li>Comentario 3</li>
-						    <li>Comentario 4</li>
-						</ul>
-					</td>
-					<!------------------------------------------->
+					<!-------------------------------------------->
 				</tr>
-				<!--========================================-->
 			</tbody>
 		</table>
-		<!-------------------------------------------------------->
 	</main>
 
 	<aside>
 		<div class="MiAside">
+			<!--BARRA DE REDES SOCIALES------------------>
 			<div class="SocialBar">
-				<a class="SocialBar__red SocialBar__red--facebook" href="https://www.facebook.com/" rel="noreferrer" target="_blank">
-					<i class="fab fa-facebook-f"></i>
-				</a>
-				<a class="SocialBar__red SocialBar__red--twitter" href="https://twitter.com/" rel="noreferrer" target="_blank">
-					<i class="fab fa-twitter"></i>
-				</a>
-				<a class="SocialBar__red SocialBar__red--instagram" href="https://www.instagram.com/" rel="noreferrer" target="_blank">
-					<i class="fab fa-instagram"></i>
-				</a>
-				<a class="SocialBar__red SocialBar__red--youtube" href="https://www.youtube.com/" rel="noreferrer" target="_blank">
-					<i class="fab fa-youtube"></i>
-				</a>
-				<a class="SocialBar__red SocialBar__red--linkedin" href="https://www.linkedin.com/" rel="noreferrer" target="_blank">
-					<i class="fab fa-linkedin-in"></i>
-				</a>
+				<!--RED SOCIAL--------------------------->
+				<a class="SocialBar__red SocialBar__red--facebook" href="https://www.facebook.com/" rel="noreferrer" target="_blank"><i class="fab fa-facebook-f"></i></a>
+				<!--RED SOCIAL--------------------------->
+				<a class="SocialBar__red SocialBar__red--twitter" href="https://twitter.com/" rel="noreferrer" target="_blank"><i class="fab fa-twitter"></i></a>
+				<!--RED SOCIAL--------------------------->
+				<a class="SocialBar__red SocialBar__red--instagram" href="https://www.instagram.com/" rel="noreferrer" target="_blank"><i class="fab fa-instagram"></i></a>
+				<!--RED SOCIAL--------------------------->
+				<a class="SocialBar__red SocialBar__red--youtube" href="https://www.youtube.com/" rel="noreferrer" target="_blank"><i class="fab fa-youtube"></i></a>
+				<!--RED SOCIAL--------------------------->
+				<a class="SocialBar__red SocialBar__red--linkedin" href="https://www.linkedin.com/" rel="noreferrer" target="_blank"><i class="fab fa-linkedin-in"></i></a>
 			</div>
+			<!--SECCION WHATSAPP------------------------->
 			<div class="MiWhatsapp rounded-pill">
-				<div class="MiWhatsapp__icono">
-					<i class="fab fa-whatsapp"></i>
-				</div>
+				<a target="_blank" rel="noreferrer" href="https://api.whatsapp.com/send?phone=519999999999&text=Saludos%20Editorial%20Sensacional" class="MiWhatsapp__icono"><i class="fab fa-whatsapp"></i></a>
 				<div class="MiWhatsapp__text">
-					Comunicate con nosotros al +51 999 999 999
+					Comunícate con nosotros al +51 999 999 999
 				</div>
 			</div>
 		</div>

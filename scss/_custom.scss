@@ -1,4 +1,5 @@
 /*PARA MODIFICAR CLASES DE BOOTSTRAP*/
+/*NAVBAR CUSTOM*/
 .navbar-collapse
 {
     flex-grow: 0;
@@ -11,12 +12,148 @@
 {
     color: white;
 }
+/*CONTAINER CUSTOM*/
 .container-fluid
 {
     padding: 0px;
 }
+/*ROW REINICIADO*/
 .row
 {
     margin-right: 0px;
     margin-left: 0px;
+}
+/*CARD CUSTOM*/
+.MiContenedor/*CUSTOMIZAR CLASES DE BOOTSTRAP EN UN CONTENEDOR ESPECIFICO*/
+{
+    margin: 0px 30px;
+    @media (max-width: 1023px)
+    {
+        width: 100%;
+        margin: auto;
+    }
+    .card
+    {
+        padding: 20px;
+        .Bcard_cont-img
+        {
+            align-self: center;
+            height: 400px;
+            overflow: hidden;
+            @media (max-width: 1023px)
+            {
+                height: 100%;
+            }
+        }
+        .Bcard_img
+        {
+            width: 100%;
+        }
+        .card-body
+        {
+            @media (max-width: 767px)
+            {
+                padding: 1.25rem 0px;
+            }
+        }
+        .card-title
+        {
+            @include FontConfig($c-negro, 32px, bold);
+            margin-bottom: 20px;
+            @media (max-width: 1023px)
+            {
+                font-size: 28px;
+                margin-bottom: 15px;
+            }
+            @media (max-width: 767px)
+            {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+        }
+        .card-text
+        {
+            @include FontConfig($c-negro, 20px, normal, justify);
+            line-height: 2;
+            @media (max-width: 1023px)
+            {
+                font-size: 18px;
+            }
+            @media (max-width: 767px)
+            {
+                font-size: 14px;
+            }
+        }
+    }
+    .card--newest
+    {
+        background-color: $c-sitio-1;
+        .card-title
+        {
+            color: $c-blanco;
+        }
+        .card-text
+        {
+            color: $c-blanco;
+        }
+    }
+}
+/*COMPONENTE ACCORDION CUSTOM*/
+.PreguntasFrecuentes/*CUSTOMIZAR CLASES DE BOOTSTRAP EN UN CONTENEDOR ESPECIFICO*/
+{
+    .accordion
+    {
+        background-color: $c-sitio-2;
+    }
+    .card
+    {
+        background-color: transparent;
+    }
+    .card-header
+    {
+        margin: 0px;
+        @media (max-width: 767px)
+        {
+            padding: 5px 10px;
+        }
+        h2
+        {
+            font-size: initial;
+        }
+        button
+        {
+            @include FontConfig(#FFFFFF, 18px, bold, left);
+            @media (max-width: 1023px)
+            {
+                padding: 6px 0px;
+            }
+            @media (max-width: 767px)
+            {
+                font-size: 14px;
+            }
+        }
+    }
+    .card-body
+    {
+        @include FontConfig(#FFFFFF, 1rem, normal, justify);
+        line-height: 2;
+        background-color: $c-sitio-4;
+        padding: 20px 120px 20px 30px;
+        @media (max-width: 1023px)
+        {
+            padding: 15px 20px;
+        }
+        @media (max-width: 767px)
+        {
+            font-size: 12px;
+            padding: 5px 10px;
+        }
+    }
+    .btn
+    {
+        &:focus
+        {
+            box-shadow: none;
+        }
+    }
 }

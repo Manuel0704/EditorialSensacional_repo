@@ -15,7 +15,6 @@
     background-color: #DCDCDC;
     padding: 0px;
 }
-
 .Categorias
 {
     .Categorias__titulo
@@ -42,29 +41,7 @@
             margin: 10px auto;
         }
     }
-    .Categorias__enlace
-    {
-        @include FontConfig(null, 14px, normal, center);
-        display: inline-block;
-        text-decoration: none;
-        background-color: $c-sitio-4;
-        width: 200px;
-        min-width: 120px;
-        padding: 15px 0px;
-        transition: all .5s;
-        &:hover
-        {
-            background-color: #1f386d;
-        }
-        @media (max-width: 767px)
-        {
-           font-size: 12px;
-           width: 120px;
-           padding: 10px 0px;
-        }    
-    }
 }
-
 .Libros
 {
     padding: 0.5em 0.5em;
@@ -79,8 +56,11 @@
     }
     .Libros__titulo
     {
-        @include FontConfig($c-blanco, 1.25em, bold);
-        margin: 0.625rem 0px;
+        @include FontConfig($c-blanco, 18px, normal, center);
+        display: flex;
+        align-items: center;
+        padding: 10px 5px;
+        height: 70px;
     }
     .Libros__imagen
     {
@@ -113,7 +93,7 @@
     {
         .MiTabla__data
         {
-            padding: 0px .2em;
+            padding: 0px 10px;
         }
     }
     .MiTabla__Cimpar
@@ -127,6 +107,8 @@
     .MiTabla__lista
     {
         list-style: none;
+        margin: 0px;
+        padding: 10px 0px;
     }
     @media (max-width: 1023px)
     {
@@ -135,7 +117,6 @@
     }
     @media (max-width: 767px)
     {
-        @include FontConfig(black, 8px, 500);
-        margin: 10px 0px;
+        display: none;
     }
 }
